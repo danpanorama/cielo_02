@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h100vh{
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .btnspace{
+            width: 150px;
+            height: 50px;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 25px;
+            box-shadow: inset 1px 2px 10px;
+            transition: all 1s ease;
+
+        }
+        .btn{
+            height: 100%;
+            width: 50px;
+            background-color: rgb(17, 17, 18);
+            border-radius: 50%;
+        }
+        .btnspace{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            transition: all 1s ease;
+        }
+    </style>
+</head>
+<body>
+
+   <div class="h100vh">
+    <h1>click here</h1>
+    <div onclick="func1()" class="btnspace" id="btnspace">
+        <div class="btn" id="btn"></div>
+    </div>
+
+   </div>
+
+    <script>
+        let flag = false
+function func1(){
+    if(flag){
+        document.getElementById('btn').style.backgroundColor = 'rgb(17, 17, 18)'
+        document.getElementById('btnspace').style.alignItems = 'flex-start' 
+        document.getElementById('btnspace').style.boxShadow = 'inset 1px 2px 10px'
+ 
+         flag = false
+    }
+    else{
+        document.getElementById('btn').style.backgroundColor = 'purple'
+        document.getElementById('btnspace').style.alignItems = 'flex-end'
+        document.getElementById('btnspace').style.boxShadow = '2px 10px 30px purple'
+
+
+
+   flag = true
+    }
+
+}
+
+    </script>
+    
+</body>
+</html>

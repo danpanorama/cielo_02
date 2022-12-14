@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+<input id="date1" type="date" >
+<input id="date2" type="date" >
+<button onclick="func1()">click</button>
+<div class="res" >
+<h1 id="res"></h1>
+</div>
+
+
+<script>  
+function func1(){
+    var date1 = document.getElementById('date1').value
+    var date2 = document.getElementById('date2').value 
+    let res = document.getElementById('res')
+    //define two date object variables with dates inside it  
+ 
+console.log(date1)
+date1_v = new Date(date1)
+date2_v = new Date(date2)
+
+    //calculate time difference  
+    var time_difference = date2_v.getTime() - date1_v.getTime();  
+
+    //calculate days difference by dividing total milliseconds in a day  
+    var days_difference = time_difference / (1000 * 60 * 60 * 24);  
+      
+    res.innerHTML = `Number of days between dates <br>" +   
+                    ${date1} + " and <br>" + ${date2} + " are: <br>"   
+                    + ${days_difference} + " days` 
+}
+ </script>    
+    
+</body>
+</html>
